@@ -113,48 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &12952074
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303856620975776, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &58104804
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +353,7 @@ GameObject:
   - component: {fileID: 220571577}
   - component: {fileID: 220571576}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Farm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,7 +416,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 220571577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897576260}
+        m_MethodName: EnableBuilder
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &220571577
@@ -842,7 +811,7 @@ GameObject:
   - component: {fileID: 699192820}
   - component: {fileID: 699192819}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Factory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -905,7 +874,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 699192820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897576260}
+        m_MethodName: EnableBuilder
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &699192820
@@ -1210,7 +1190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c724af74b032fc4793126c7cee945c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingCount: 000000000000000000000000
+  buildingCount: 00000000000000000000000000000000
 --- !u!4 &1021798806
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,7 +1202,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1021798807
 MonoBehaviour:
@@ -1249,7 +1229,7 @@ GameObject:
   - component: {fileID: 1555393615}
   - component: {fileID: 1555393614}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1312,7 +1292,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555393615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897576260}
+        m_MethodName: EnableBuilder
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1555393615
@@ -1482,7 +1473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726204909
 GameObject:
@@ -1547,7 +1538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1875218358
 GameObject:
@@ -1638,7 +1629,7 @@ RectTransform:
   - {fileID: 911522314}
   - {fileID: 90578486}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1657,6 +1648,7 @@ GameObject:
   - component: {fileID: 1897576256}
   - component: {fileID: 1897576255}
   - component: {fileID: 1897576259}
+  - component: {fileID: 1897576260}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -1728,7 +1720,7 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1897576259
 MonoBehaviour:
@@ -1741,6 +1733,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8253aa73a6347fe48b6f18dc9ddd5d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1897576260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897576254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c7077bcda0e49488b81b6808e1100a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  city: {fileID: 1021798805}
+  uiController: {fileID: 1021798807}
+  buildings:
+  - {fileID: 114142135034189150, guid: a92f9cb90ce67b1408bef602f8a552fd, type: 2}
+  - {fileID: 114098418896137654, guid: b1bc1efef5af0b04fa59a23fde9534ac, type: 2}
+  - {fileID: 114510290700763302, guid: b3a2da547c70bca48be3d260492a8fc8, type: 2}
+  - {fileID: 114604956085189462, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
+  board: {fileID: 1897576259}
 --- !u!1 &1948474985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1764,7 @@ GameObject:
   - component: {fileID: 1948474988}
   - component: {fileID: 1948474987}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1816,7 +1827,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948474988}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897576260}
+        m_MethodName: EnableBuilder
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1948474988
@@ -1852,48 +1874,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1948474985}
---- !u!1001 &2072366909
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600961830880120, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5ce2afb0f99f0fa40899413e69dfb4fa, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2089643132
 GameObject:
   m_ObjectHideFlags: 0
