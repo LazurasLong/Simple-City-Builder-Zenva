@@ -18,9 +18,7 @@ public class City : MonoBehaviour {
     // Use this for initialization
     void Start () {
         uiController = GetComponent<UIController>();
-        Cash = 10000;
-        Food = 6;
-        JobsCeiling = 10;
+        Cash = 50;
 	}
 	
 	public void EndTurn()
@@ -41,6 +39,11 @@ public class City : MonoBehaviour {
     {
         JobsCeiling = buildingCount[3] * 10;
         JobsCurrent = Mathf.Min((int)PopulationCurrent, JobsCeiling);
+    }
+
+    public void DepositCash(int cash)
+    {
+        Cash += Cash;
     }
 
     void CalculateCash()
