@@ -15,8 +15,11 @@ public class UIController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         city = GetComponent<City>();
+        UpdateCityData();
+        UpdateDayCount();
 
-	}
+
+    }
 
     public void UpdateCityData()
     {

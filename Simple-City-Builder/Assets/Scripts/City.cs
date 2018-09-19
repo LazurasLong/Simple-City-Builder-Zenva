@@ -24,9 +24,9 @@ public class City : MonoBehaviour {
 	public void EndTurn()
     {
         Day++;
-        CalculateJobs();
-        CalculateFood();
         CalculateCash();
+        CalculateJobs();
+        CalculateFood();        
         CalculatePopulation();
         Debug.Log("Day ended.");
         uiController.UpdateCityData();
@@ -43,7 +43,7 @@ public class City : MonoBehaviour {
 
     public void DepositCash(int cash)
     {
-        Cash += Cash;
+        Cash += cash;
     }
 
     void CalculateCash()
