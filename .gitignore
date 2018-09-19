@@ -34,7 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+<<<<<<< HEAD
 
 # Tut Files
 *.rar
 *.zip
+=======
+>>>>>>> develop
