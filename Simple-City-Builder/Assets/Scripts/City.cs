@@ -13,9 +13,11 @@ public class City : MonoBehaviour {
     public float Food { get; set; }
 
     public int[] buildingCount = new int[3];
+    private UIController uiController;
 
     // Use this for initialization
     void Start () {
+        uiController = GetComponent<UIController>();
         Cash = 10000;
         Food = 6;
         JobsCeiling = 10;
@@ -29,6 +31,8 @@ public class City : MonoBehaviour {
         CalculateCash();
         CalculatePopulation();
         Debug.Log("Day ended.");
+        uiController.UpdateCityData();
+        uiController.UpdateDayCount();
         Debug.LogFormat
             ("Jobs: {0}/{1}, Cash: {2}, pop: {3}/{4}, Food: {5}", JobsCurrent, JobsCeiling, Cash, PopulationCurrent, PopulationCeiling, Food);
     }
